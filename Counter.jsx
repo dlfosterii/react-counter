@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import {increment,decrement,incrementFive,decrementFive} from './redux/actions';
 
-
+//the meathod for increment passes a function for the value insead of a hardcoded number from the actions.jsx file
 class Counter extends React.Component {
   render() {
     return (
@@ -12,7 +12,7 @@ class Counter extends React.Component {
           <button onClick={this.props.decrementFive}>-5</button>
           <button onClick={this.props.decrement}>-</button><span> </span>
           <span>{this.props.counterValue}</span>
-          <span> </span><button onClick={()=> {this.props.increment(1)}}>+</button>
+          <span> </span><button onClick={()=> {this.props.increment(1)}}>+</button> 
           <button onClick={()=>{this.props.increment(5)}}>+5</button>
         </div>
       </div>
